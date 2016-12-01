@@ -1,0 +1,14 @@
+data:
+  pathToData: 'netAnalysis/data/'
+  pathToCLRData: 'netAnalysis/data/CLR_data/'
+  pathToOut: 'data/'
+datasets:
+  DREAM5: 'DREAM5/'
+  Arabidopsis: 'Arabidopsis/'
+  Raf: 'Raf/'
+  Root: 'Root_li/'
+params:
+  saveAll: 0
+  log: 1
+others:
+

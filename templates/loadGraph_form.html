@@ -1,0 +1,72 @@
+<!-- Modal Form -->
+<div class="modal fade" id="{{formID}}" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form class="form-horizontal" action="#" method="POST" enctype="multipart/form-data">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+            </button>
+                <h4 class="modal-title" id="myModalLabel">Choose SubNetwork</h4>
+          </div>
+          <div class="modal-body">
+                <div class="form-group">
+                  <label for="dataset" class="col-xs-4 control-label">Data Set Name:</label>
+                  <div class="col-xs-7">
+                      <select id="dataset" class="form-control">
+                        <optgroup label="DREAM5">
+                        {% for item in datasets %}
+                            <option value="{{ item }}">{{ item }}</option>
+                        {% endfor %}
+                        </optgroup>
+                        <optgroup label="Small Tests">
+                          <option>TODO</option>                          
+                        </optgroup>
+                      </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="startGene" class="col-xs-4 control-label">Network Type: </label>
+                  <div class='col-xs-7'>
+                    <div class="radio">
+                      <label><input type="radio" name="gold_standard" value="1">Gold standard</label>
+                    </div>
+                    <div class="radio">
+                      <label><input type="radio" name="gold_standard" value="0"  checked>Predicted</label>
+                    </div>                    
+                  </div>
+                </div>      
+                <div class="form-group">
+                  <label for="numOfGenes" class="col-xs-4 control-label">Number of edges: </label>
+                  <div class='col-xs-7'>
+                    <input id="numOfGenes" type="number" value="50" min=1 max=200 step=20 class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="startGene" class="col-xs-4 control-label">Start at edge number: </label>
+                  <div class='col-xs-7'>
+                    <input id="startGene" type="number" value="0" min=1 max=10000 step=50 class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-xs-5 control-label">OR -- </label>                  
+                </div>
+                <div class="form-group">
+                  <label for="geneID" class="col-xs-4 control-label"> Subgraph with geneID: </label>
+                  <div class='col-xs-7'>
+                    <input id="geneID" class="form-control">
+                  </div>
+                </div>
+                  
+                
+                
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button id="submitBtn" type="button" class="btn btn-primary">{{okBtn}}</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

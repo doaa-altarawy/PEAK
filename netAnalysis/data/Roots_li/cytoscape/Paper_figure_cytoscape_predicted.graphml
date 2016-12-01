@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml>
+    <key attr.name="SUID" attr.type="long" for="node" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="node" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="node" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="node" id="selected"/>
+    <key attr.name="SUID" attr.type="long" for="node" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="node" id="shared name"/>
+    <key attr.name="shared interaction" attr.type="string" for="node" id="shared interaction"/>
+    <key attr.name="name" attr.type="string" for="node" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="node" id="selected"/>
+    <key attr.name="interaction" attr.type="string" for="node" id="interaction"/>
+    <key attr.name="Direction" attr.type="int" for="node" id="Direction"/>
+    <key attr.name="SUID" attr.type="long" for="node" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="node" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="node" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="node" id="selected"/>
+    <key attr.name="__Annotations" attr.type="string" for="node" id="__Annotations"/>
+    <graph edgedefault="directed" id="paper">
+        <node id="362">
+            <data key="SUID">362</data>
+            <data key="shared name">SCR</data>
+            <data key="name">SCR</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="360">
+            <data key="SUID">360</data>
+            <data key="shared name">WOX5</data>
+            <data key="name">WOX5</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="358">
+            <data key="SUID">358</data>
+            <data key="shared name">Auxin</data>
+            <data key="name">Auxin</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="388">
+            <data key="SUID">388</data>
+            <data key="shared name">miRNA165</data>
+            <data key="name">miRNA165</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="354">
+            <data key="SUID">354</data>
+            <data key="shared name">SHR</data>
+            <data key="name">SHR</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="352">
+            <data key="SUID">352</data>
+            <data key="shared name">CLE</data>
+            <data key="name">CLE</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="351">
+            <data key="SUID">351</data>
+            <data key="shared name">IAA5</data>
+            <data key="name">IAA5</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="349">
+            <data key="SUID">349</data>
+            <data key="shared name">PHB</data>
+            <data key="name">PHB</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="348">
+            <data key="SUID">348</data>
+            <data key="shared name">CYA</data>
+            <data key="name">CYA</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="346">
+            <data key="SUID">346</data>
+            <data key="shared name">JKD</data>
+            <data key="name">JKD</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="377">
+            <data key="SUID">377</data>
+            <data key="shared name">ACR</data>
+            <data key="name">ACR</data>
+            <data key="selected">false</data>
+        </node>
+        <node id="345">
+            <data key="SUID">345</data>
+            <data key="shared name">MGP</data>
+            <data key="name">MGP</data>
+            <data key="selected">false</data>
+        </node>
+        <edge source="362" target="346">
+            <data key="SUID">1138</data>
+            <data key="shared name">SCR (interacts with) JKD</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SCR (interacts with) JKD</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="362" target="388">
+            <data key="SUID">1134</data>
+            <data key="shared name">SCR (interacts with) miRNA165</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SCR (interacts with) miRNA165</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="362" target="362">
+            <data key="SUID">1132</data>
+            <data key="shared name">SCR (interacts with) SCR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SCR (interacts with) SCR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="360" target="349">
+            <data key="SUID">1176</data>
+            <data key="shared name">WOX5 (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">WOX5 (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="360" target="351">
+            <data key="SUID">1166</data>
+            <data key="shared name">WOX5 (interacts with) IAA5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">WOX5 (interacts with) IAA5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="360" target="360">
+            <data key="SUID">1158</data>
+            <data key="shared name">WOX5 (interacts with) WOX5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">WOX5 (interacts with) WOX5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="358" target="349">
+            <data key="SUID">1182</data>
+            <data key="shared name">Auxin (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">Auxin (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="358" target="351">
+            <data key="SUID">1168</data>
+            <data key="shared name">Auxin (interacts with) IAA5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">Auxin (interacts with) IAA5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="388" target="349">
+            <data key="SUID">1150</data>
+            <data key="shared name">miRNA165 (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">miRNA165 (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="388" target="388">
+            <data key="SUID">1130</data>
+            <data key="shared name">miRNA165 (interacts with) miRNA165</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">miRNA165 (interacts with) miRNA165</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="388" target="354">
+            <data key="SUID">1124</data>
+            <data key="shared name">miRNA165 (interacts with) SHR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">miRNA165 (interacts with) SHR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="354" target="349">
+            <data key="SUID">1154</data>
+            <data key="shared name">SHR (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SHR (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="354" target="354">
+            <data key="SUID">1128</data>
+            <data key="shared name">SHR (interacts with) SHR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SHR (interacts with) SHR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="354" target="362">
+            <data key="SUID">1120</data>
+            <data key="shared name">SHR (interacts with) SCR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SHR (interacts with) SCR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="352" target="352">
+            <data key="SUID">1180</data>
+            <data key="shared name">CLE (interacts with) CLE</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CLE (interacts with) CLE</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="352" target="349">
+            <data key="SUID">1174</data>
+            <data key="shared name">CLE (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CLE (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="352" target="360">
+            <data key="SUID">1160</data>
+            <data key="shared name">CLE (interacts with) WOX5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CLE (interacts with) WOX5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="351" target="349">
+            <data key="SUID">1170</data>
+            <data key="shared name">IAA5 (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">IAA5 (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="351" target="360">
+            <data key="SUID">1164</data>
+            <data key="shared name">IAA5 (interacts with) WOX5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">IAA5 (interacts with) WOX5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="349" target="360">
+            <data key="SUID">1178</data>
+            <data key="shared name">PHB (interacts with) WOX5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">PHB (interacts with) WOX5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="349" target="349">
+            <data key="SUID">1152</data>
+            <data key="shared name">PHB (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">PHB (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="349" target="346">
+            <data key="SUID">1148</data>
+            <data key="shared name">PHB (interacts with) JKD</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">PHB (interacts with) JKD</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="346" target="346">
+            <data key="SUID">1146</data>
+            <data key="shared name">JKD (interacts with) JKD</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">JKD (interacts with) JKD</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="346" target="345">
+            <data key="SUID">1142</data>
+            <data key="shared name">JKD (interacts with) MGP</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">JKD (interacts with) MGP</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="346" target="362">
+            <data key="SUID">1136</data>
+            <data key="shared name">JKD (interacts with) SCR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">JKD (interacts with) SCR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="346" target="354">
+            <data key="SUID">1122</data>
+            <data key="shared name">JKD (interacts with) SHR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">JKD (interacts with) SHR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="377" target="349">
+            <data key="SUID">1172</data>
+            <data key="shared name">ACR (interacts with) PHB</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">ACR (interacts with) PHB</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="377" target="360">
+            <data key="SUID">1162</data>
+            <data key="shared name">ACR (interacts with) WOX5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">ACR (interacts with) WOX5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="345" target="360">
+            <data key="SUID">1156</data>
+            <data key="shared name">MGP (interacts with) WOX5</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">MGP (interacts with) WOX5</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="345" target="345">
+            <data key="SUID">1144</data>
+            <data key="shared name">MGP (interacts with) MGP</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">MGP (interacts with) MGP</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="345" target="346">
+            <data key="SUID">1140</data>
+            <data key="shared name">MGP (interacts with) JKD</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">MGP (interacts with) JKD</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+        <edge source="345" target="354">
+            <data key="SUID">1126</data>
+            <data key="shared name">MGP (interacts with) SHR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">MGP (interacts with) SHR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+        </edge>
+    </graph>
+</graphml>

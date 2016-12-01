@@ -1,0 +1,27 @@
+=========== inside the code (testing) ============
+--path_to_scripts ./scripts_GenePattern --data_file ~/Desktop/DREAM5/net1/test_expression_data.tsv --reg_file ~/Desktop/DREAM5/net1/test_transcription_factors.tsv 
+                               --n_boots 100 --inf_max_reg 30 --tau 40 --num_pred 100000 --num_processors 6
+
+
+============= Doaa ===============
+
+-------- small network 1 ------
+
+Rscript ./scripts/runInf.R --data_file input/DREAM5/Network1_small/net1_expression_data_small.tsv --reg_file input/DREAM5/Network1_small/net1_transcription_factors.tsv --meta_file input/DREAM5/Network1_small/net1_chip_features.tsv --inf_max_reg 30 --n_boots 3 --tau 15 --num_pred 10000 --path_to_scripts ./scripts/
+
+
+-------- network 1 -----------
+Rscript ./scripts/runInf.R --data_file input/DREAM5/Network1/net1_expression_data.tsv --reg_file input/DREAM5/Network1/net1_transcription_factors.tsv --meta_file input/DREAM5/Network1/net1_chip_features.tsv --inf_max_reg 30 --n_boots 3 --tau 15 --num_pred 10000 --path_to_scripts ./scripts/
+
+=============== GP-export example 1 ==============
+Rscript ./scripts_GenePattern/runInf.R --data_file input/DREAM5/net3/net3_expression_data_1250.tsv --reg_file input/DREAM5/net3/net3_transcription_factors.tsv --meta_file input/DREAM5/net3/net3_chip_features.tsv --inf_max_reg 30 --n_boots 3 --tau 15 --num_pred 10000 --path_to_scripts ./scripts_GenePattern/
+
+================GP-export example  2 ===========
+
+Rscript ./scripts_GenePattern/runInf.R --data_file input/DREAM5/net3/net3_expression_data_1250.tsv --reg_file input/DREAM5/net3/net3_transcription_factors.tsv --meta_file input/DREAM5/net3/net3_chip_features.tsv --path_to_scripts ./scripts_GenePattern/
+
+==============GP-export example  3 ===============
+
+Rscript ./scripts_GenePattern/runInf.R --data_file input/DREAM5/net3/net3_expression_data_1250.tsv --reg_file input/DREAM5/net3/net3_transcription_factors.tsv --inf_max_reg 30 --n_boots 3 --tau 15 --num_pred 10000 --path_to_scripts ./scripts_GenePattern/
+
+====================================

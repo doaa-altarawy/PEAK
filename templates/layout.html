@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>DeTangle: Interactive Regulatory Network Inference</title>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~    CSS   ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='libs/bootstrap/css/bootstrap-3.0.3.min.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='libs/bootswatch/cerulean/bootstrap.min.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='libs/vex/vex.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='libs/vex/vex-theme-default.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='libs/slider/css/slider.css')}}" />
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='libs/messenger/css/messenger.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='libs/messenger/css/messenger-theme-flat.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/siteLayout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/molecule.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/graph.css')}}">
+
+
+</head>
+<body>
+{% block content %}
+
+
+{% endblock %}
+<!--~~~~~~~~~~~~~~~~~~~ Footer Div ~~~~~~~~~~~~~~~~~~~~-->
+{% block footer %}
+<hr>
+<div>
+    <footer style="margin-top: 15px" class="text-center">
+        <p>By <a href="http://bioinformatics.cs.vt.edu/~doaa2012/">Doaa Altarawy</a>, VT</p>
+    </footer>
+</div>
+{% endblock %}
+
+{% block showMessages %}
+{% endblock %}
+
+<!--~~~~~~~~~~~~~~~~~~~~~~ Javascript ~~~~~~~~~~~~~~~~~~~~~-->
+<script src="{{url_for('static', filename='libs/jquery/jquery-1.10.2.min.js')}}"></script>
+<script src="{{url_for('static', filename='libs/bootstrap/js/bootstrap-3.0.3.min.js')}}"></script>
+<script src="{{url_for('static', filename='libs/messenger/js/messenger.min.js')}}"></script>
+<script src="{{url_for('static', filename='libs/messenger/js/messenger-theme-flat.js')}}"></script>
+<script src="{{url_for('static', filename='libs/slider/js/bootstrap-slider.js')}}"></script>
+{% block javascript %}
+{% endblock %}
+
+</body>
+</html>

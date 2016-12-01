@@ -1,0 +1,359 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ NavBar (top) ~~~~~~~~~~~~~~~~~~~~~-->
+<div class="navbar-sm navbar-inverse container" style="width:85%">
+
+        <div class="navbar-header">
+          <a href="./" class="navbar-brand">DeTangle</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="fileMenu">File <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="fileMenu">
+                    <li><a id='loadGraphDialog' tabindex="-1" href="#">Load Graph</a></li>
+                    <li><a tabindex="-1" href="#" onclick="drawGraph();">Load Demo Graph</a></li>
+                    <li><a tabindex="-1" href="./saveGraph">Save Graph with positions</a></li>
+                    <li><a tabindex="-1" href="./saveGraphAs">Save As</a></li>
+                    <li class="divider"></li>
+                    <li><a tabindex="-1" href="./uploadGraph">Upload Graph</a></li>
+                    <li><a tabindex="-1" href="./downloadGraph">Download Graph</a></li>
+                    <li class="divider"></li>
+                    <li><a tabindex="-1" href="./default/">Under Development</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="viewMenu">View <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="viewMenu">                    
+                    <li><a id="redrawCurrentGraph" tabindex="-1" href="#">Redraw graph</a></li>
+              </ul>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="editMenu">Edit <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="editMenu">
+                    <li><a tabindex="-1" href="./add">Add Edge</a></li>
+                    <li><a tabindex="-1" href="./delete">Delete Edge</a></li>
+                    <li><a tabindex="-1" href="./change">Change weight</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="runMenu">Run<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="runMenu">
+                    <!--<li><a tabindex="-1" href="runTest">Run Test</a></li>
+                    <li><a tabindex="-1" href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static">Run Test 2</a></li>-->
+                    <li><a id='runAutoTest' tabindex="-1" href="#">Run automated Test</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="helpMenu">Help<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="helpMenu">
+                    <li><a tabindex="-1" href="./About/">About</a></li>
+                    <li class="divider"></li>
+                    <li><a tabindex="-1" href="./HowTo/">How To</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://bioinformatics.cs.vt.edu/beacon/" target="_blank">Beacon Project</a></li>
+          </ul>
+        </div>
+
+</div>
+
+<!--~~~~~~~~~~~~~~~~ container for btns and D3 canvas ~~~~~~~~~~~~~~~~~~~-->
+<div class="container" style="width:85%">
+    <!--~~~~~~~~~~~~~~~~~~~~~~ Buttons ~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div id="controlPanel">
+        <!-- Search row
+        <div class="row">
+            <form class="input-group col-sm-4 pull-right">
+                <input type="text" class="form-control input-sm" placeholder="Search">
+                <span class="input-group-btn">
+                <button style="margin-left: 5px;" class="btn btn-primary btn-sm" onclick="loadMoleculeExample()" type="button">
+                    Search</button>
+                </span>
+            </form>
+        </div>
+        -->
+        <div style="margin-top: 10px;" class="row">
+            <!-- Standard button -->
+            <div class="col-xs-4">
+                <button type="button" onclick="addAtom('C')" class="btn btn-sm btn-info">Add Edge </button>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown">
+                    Edge Confidence <span class="caret"></span>
+                  </button>
+                    <ul class="dropdown-menu" role="menu">
+                     <li><a href="#" onclick="changeBond(1)">Low</a></li>
+                     <li><a href="#" onclick="changeBond(3)">High</a></li>
+                    </ul>
+                </div>
+                <button type="button" onclick="deleteAtom()" class="btn btn-sm btn-danger">Delete Edge</button>
+
+            </div>
+
+            <div class="col-xs-4">
+              <label class="control-label" for="weightCutoffSlider">Weight Cut-off: </label>
+                <input id="weightCutoffSlider" type="text" class="span2"
+                data-slider-min="0" data-slider-max="1" data-slider-step="0.02" data-slider-value="0.01"/>   
+            </div>
+
+            <div class="pull-right">
+                <button id="reEvaluate" type="button" class="btn btn-sm btn-success">
+                    <span class="glyphicon glyphicon-refresh"></span> Re-evaluate
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~ D3 canvas ~~~~~~~~~~~~~~~~~~~~~~~-->
+   <!-- <div id="mainContents" class="row pre-scrollable-600 table-bordered">
+      <div id="svgDisplay" class="canvas"></div>
+    </div>
+    -->
+     <div class="row">
+        <ul id="mainContents" class="nav nav-tabs">
+            <li class="active"><a href="#svgDisplay" data-toggle="tab" aria-expanded="true">Edit Graph</a></li>
+            <li class=""><a href="#testDisplay" data-toggle="tab" aria-expanded="false">Test Display</a></li>
+        </ul>
+
+        <div class="tab-content pre-scrollable table-bordered">
+            <div id="svgDisplay" class="canvas tab-pane active in"></div>
+            <div id="testDisplay" class="canvas tab-pane"></div>
+        </div>
+    </div>
+
+</div>
+
+<div id='formHolder'></div>
+{% include 'editEdgeWeight_form.html' %}
+
+{% endblock %}
+<!-- end contents block -->
+
+{% block showMessages %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>Message: {{message}}</li>
+            {% endfor %}
+            </ul>
+        {% endif%}
+    {% endwith %}
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+
+    Messenger.options = {
+        extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
+        theme: 'flat'
+    };
+
+    // specifies code that should run once the browser is done loading
+    $(function(){
+        // for flask and jquery
+        //$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+        // prevent right click browser default on svgDisplay div (svg)
+        window.oncontextmenu = function (ev) {            
+            ev.preventDefault();
+            //return false;     // cancel default menu
+        }
+        
+        // Change tootlip
+        // $('#weightCutoffSlider').slider({
+        //     formater: function(value) {
+        //         return 'weight cut-off: ' + value;
+        //     }
+        // });
+       
+        // Work around for a bug in displaying the toolip
+        $('#weightCutoffSlider').slider().on('slide', function(e) {
+            var w = Math.round(e.value*100) / 100.0;
+            $('#weightCutoffSlider').slider('setValue', w);
+        });
+
+        // When weight cut off change, update the graph
+        $('#weightCutoffSlider').slider().on('slide', function(e) {
+            var w = Math.round(e.value*100) / 100.0;
+            // refresh the graph with w
+            updateEdges(w);
+        });
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // get Modal form for loading
+        $('#loadGraphDialog').on('click', function(){    
+            console.log("load Graph...");    
+            $.get("/_loadDemoGraphList", {formId:'chooseGraphForm'})
+                .done(function(data) {
+                    //alert(data);
+                    $('div#formHolder').html(data);
+                    // bind ok button action
+                    $('#submitBtn').bind('click', function(){
+                            //var formData = new FormData($("#inputForm"));
+                            graphName = $("#dataset").val();
+                            count = Number($('#numOfGenes').val())
+                            startNo = Number($('#startGene').val())
+                            geneID = $('#geneID').val()
+                            //gold_standard = Number($('gold_standard:checked').val())
+                            gold_standard = Number($('input[name=gold_standard]:checked').val())
+                            console.log("graphName: "+graphName+ 
+                                ", From: "+startNo+" ,To: "+count+ ", geneID: "+ geneID);
+                            getDrawGraph(graphName, startNo, count, gold_standard, geneID);                         
+                            $("#chooseGraphForm").modal('hide');
+                            return false;
+                      });
+                    $("div#chooseGraphForm").modal('show');
+                })
+                .fail(function() {
+                    alert( "A problem happened." );
+                })
+                .always(function() {
+                    //alert( "finished" );
+                });
+            $('li.dropdown').removeClass('open');
+            return false;           
+        });
+
+        // //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // $('a#loadDemoGraph').on('click', function() {
+        //     console.log("loadDemoGraph...");
+        //     getDrawGraph('');
+        //     // close dropdowns
+        //     $('li.dropdown').removeClass('open');
+        //     return false;
+        // });
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $('a#redrawCurrentGraph').on('click', function() {
+            redrawGraph();
+            // close dropdowns
+            $('li.dropdown').removeClass('open');
+            return false;
+        });
+        
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $('#reEvaluate').on('click', function(){
+            // setTimeout('', 1000);
+            getDrawGraph('');
+            return false;
+        });
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // get Modal form for run data
+        $('#runAutoTest').on('click', function(){        
+            $.get("/_runTest", {formId:'inputForm'})
+                .done(function(data) {
+                    //alert(data);
+                    $('div#formHolder').html(data);
+                    // bind ok button action
+                    $('#submitBtn').bind('click', submitForm);
+                    $("div#inputForm").modal('show');
+                })
+                .fail(function() {
+                    alert( "A problem happened." );
+                })
+                .always(function() {
+                    //alert( "finished" );
+                });            
+        });
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // get and Draw graph!
+        var submitForm = function(){
+             //var formData = new FormData($("#inputForm"));
+             graphName = $("#dataset").val(); //not tested
+             console.log("graphName: "+graphName);
+             getDrawGraph(graphName);
+             // $.ajax({
+             //   type: "POST",
+             //   url: "/_runTest",
+             //   data: formData, //$("#inputForm").serialize(), // serializes the form's elements.
+             //   contentType: 'multipart/form-data', //false,
+             //   processData: false,
+             //   success: function(data){
+             //       //alert(data); // show response from the server
+             //       console.log(data);
+             //   },
+             //   fail: function(){
+             //      alert('failed!'); // show response from the server              
+             //   }
+             // });
+            $("#inputForm").modal('hide');
+            return false;
+        };   
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // Load a ready graph from server
+        function getDrawGraph(graphName){
+            getDrawGraph(graphName, 0, 50, 1, '');
+        }
+        function getDrawGraph(graphName, start, count, gold_standard, geneID){
+          $.getJSON('/_loadGraph', 
+                {graphName: graphName,
+                  startGene: start,
+                  numOfGenes: count,
+                  gold_standard: gold_standard,
+                  geneID: geneID})
+            .done(function(ntdata) {
+              console.dir(ntdata);
+              drawGraph(ntdata);
+            });
+        }     
+    }); //end anonymous func
+
+    //========================================================
+    // Edge edge weight form 
+    function showTextBox(text){
+        weightChanged = false;
+        $('#edgeWeight').val(text);
+        $('#editEdgeWeightForm').modal('show');
+        $('#edgeWeightSubmit').bind('click', function(){
+            var newWeight = Number($('#edgeWeight').val());
+            console.log("New weight: "+newWeight);
+            if (newWeight == NaN){
+                alert(newWeight+ " is not a number. \nPlease" 
+                    + "Enter a number between 0 and 1");
+                return;
+            }
+            updateWeight(newWeight);
+            $("#editEdgeWeightForm").modal('hide');
+            return true;
+        });
+    }// end(showTextBox)
+    
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // check if a mouse event is a right click
+    function isRightClick(e) {
+        var isRightMB;
+        e = e || window.event;
+
+        if ("which" in e)  // Gecko (Firefox), WebKit (Safari/Chrome) & Opera
+            isRightMB = e.which == 3; 
+        else if ("button" in e)  // IE, Opera 
+            isRightMB = e.button == 2; 
+        return isRightMB;            
+    } 
+    
+</script>
+
+
+<script src="{{url_for('static', filename='libs/vex/vex.combined.min.js')}}"></script>
+<script>vex.defaultOptions.className = 'vex-theme-default';</script>
+<script src="{{url_for('static', filename='libs/d3/d3.v3.min.js')}}"></script>
+<script src="{{url_for('static', filename='libs/glow.js')}}"></script>
+<!--<script type="text/javascript" src="{{url_for('static', filename='js/atomDB.js')}}"></script>-->
+<script type="text/javascript" src="{{url_for('static', filename='js/graph.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
+
+{% endblock %}

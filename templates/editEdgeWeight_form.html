@@ -1,0 +1,23 @@
+<!-- Modal Form -->
+<div id="editEdgeWeightForm" class="modal" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-center">
+    <div class="modal-content">
+      <form class="form-horizontal" action="#" method="get">
+          
+          <div class="modal-body">
+              <div class="form-group">
+                  <label for="edgeWeight" class="col-xs-7 control-label">Edge Weight: </label>
+                  <div class='col-xs-5'>
+                    <input id="edgeWeight" type="number" min=0 max=1 step=0.1 class="form-control">
+                  </div>
+              </div>                
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button id="edgeWeightSubmit" type="button" class="btn btn-primary">Ok</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

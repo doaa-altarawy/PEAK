@@ -1,0 +1,7 @@
+isTs	is1stLast	prevCol	del.t	condName
+TRUE	m	TS_20delt_700	50	TS_20delt_750
+TRUE	m	TS_20delt_750	50	TS_20delt_800
+TRUE	m	TS_20delt_800	50	TS_20delt_850
+TRUE	m	TS_20delt_850	50	TS_20delt_900
+TRUE	m	TS_20delt_900	50	TS_20delt_950
+TRUE	l	TS_20delt_950	50	TS_20delt_1000

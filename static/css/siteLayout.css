@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 8, 2015, 12:16:46 PM
+    Author     : doaa
+*/
+
+body{    
+    padding-top: 0px; 
+    /*background-color: #d9edf7;*/
+    background-color: #E5E5E5 !important;
+    /*background-color: #9db8d0 !important; */
+    /*background-color:  #E7F3FF !important; */
+}
+ 
+body .modal-center {
+   /* width: 250px; */
+    margin-top: 15%;
+}
+
+.canvas{    
+    background-color: #f9f9fa; 
+    text-align: center;
+    border: 1px solid #888;
+}
+
+#mainContents{
+    margin-top: 15px; 
+    text-align: center
+}
+
+.container{
+    margin-bottom: 10px;
+}
+
+.navbar-sm .navbar-inverse .navbar { min-height:40px; height: 40px; }
+.navbar-sm .navbar-inverse.navbar .navbar-brand{ padding: 0px 12px;font-size: 16px;line-height: 40px; }
+.navbar-sm .navbar-inverse .navbar .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 40px; }
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

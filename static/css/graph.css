@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 5, 2014, 3:17:44 PM
+    Author     : doaa2012
+*/
+
+svg {
+  background-color: #f9f9fa;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  /*cursor: crosshair;*/
+}
+
+path.link {
+  fill: none;
+  stroke: #696969;
+  stroke-width: 1.6px;
+  cursor: default;
+  /*pointer-events: none;*/
+}
+
+path.hiddenLink {  
+  stroke-width: 8px;
+  stroke: red;
+  stroke-opacity: 0.0;
+  cursor: default;
+}
+
+path.marker {
+    fill: #fff;
+    stroke: #696969;
+    stroke-width: 1.5px;
+    cursor: default;    
+}
+
+.edgeText {
+  text-anchor: middle;
+/*  pointer-events: none; */
+  font: 14px sans-serif;
+  /*fill: #9a161a;*/
+  cursor: pointer;
+}
+
+svg:not(.active):not(.ctrl) path.hiddenLink{
+  cursor: pointer;
+}
+
+path.link.selected {  
+  stroke: red !important;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node.reflexive {
+  stroke: #444 !important;
+  stroke-width: 2px;
+}
+
+circle.node.selected {
+  stroke: red !important;
+  stroke-width: 2px;
+}
+
+circle.text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  text-anchor: middle;  
+}
+
+.pre-scrollable{
+    max-height: 600px;
+    overflow-y: scroll;
+}

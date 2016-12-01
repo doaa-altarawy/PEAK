@@ -1,0 +1,33 @@
+"SUID","conf","interaction","name","Predicted","selected","shared interaction","shared name","Target Arrow Shape"
+"958",,"interacts with","MGP (interacts with) SHR",,"false","interacts with","MGP (interacts with) SHR",
+"959",,"interacts with","MGP (interacts with) JKD","1","false","interacts with","MGP (interacts with) JKD",
+"960",,"interacts with","MGP (interacts with) MGP",,"false","interacts with","MGP (interacts with) MGP","T"
+"961",,"interacts with","MGP (interacts with) WOX5","1","false","interacts with","MGP (interacts with) WOX5",
+"962",,"interacts with","ACR (interacts with) WOX5",,"false","interacts with","ACR (interacts with) WOX5","T"
+"963",,"interacts with","ACR (interacts with) PHB","1","false","interacts with","ACR (interacts with) PHB","T"
+"964",,"interacts with","JKD (interacts with) SHR",,"false","interacts with","JKD (interacts with) SHR",
+"965",,"interacts with","JKD (interacts with) SCR",,"false","interacts with","JKD (interacts with) SCR",
+"966",,"interacts with","JKD (interacts with) MGP",,"false","interacts with","JKD (interacts with) MGP",
+"967",,"interacts with","JKD (interacts with) JKD",,"false","interacts with","JKD (interacts with) JKD",
+"968",,"interacts with","PHB (interacts with) JKD",,"false","interacts with","PHB (interacts with) JKD","T"
+"969",,"interacts with","PHB (interacts with) PHB","1","false","interacts with","PHB (interacts with) PHB",
+"970",,"interacts with","PHB (interacts with) WOX5",,"false","interacts with","PHB (interacts with) WOX5","T"
+"971",,"interacts with","IAA5 (interacts with) WOX5",,"false","interacts with","IAA5 (interacts with) WOX5","T"
+"972",,"interacts with","IAA5 (interacts with) PHB","1","false","interacts with","IAA5 (interacts with) PHB",
+"973",,"interacts with","CLE (interacts with) WOX5",,"false","interacts with","CLE (interacts with) WOX5","T"
+"974",,"interacts with","CLE (interacts with) PHB","1","false","interacts with","CLE (interacts with) PHB","T"
+"975",,"interacts with","CLE (interacts with) CLE","1","false","interacts with","CLE (interacts with) CLE",
+"976",,"interacts with","SHR (interacts with) SCR",,"false","interacts with","SHR (interacts with) SCR",
+"977",,"interacts with","SHR (interacts with) SHR","1","false","interacts with","SHR (interacts with) SHR",
+"978",,"interacts with","SHR (interacts with) PHB","1","false","interacts with","SHR (interacts with) PHB",
+"979",,"interacts with","miRNA165 (interacts with) SHR",,"false","interacts with","miRNA165 (interacts with) SHR",
+"980",,"interacts with","miRNA165 (interacts with) miRNA165","1","false","interacts with","miRNA165 (interacts with) miRNA165",
+"981",,"interacts with","miRNA165 (interacts with) PHB",,"false","interacts with","miRNA165 (interacts with) PHB","T"
+"982",,"inhibits","Auxin (interacts with) IAA5",,"false","inhibits","Auxin (interacts with) IAA5","T"
+"983",,"inhibits","Auxin (interacts with) PHB","1","false","inhibits","Auxin (interacts with) PHB","T"
+"984",,"interacts with","WOX5 (interacts with) WOX5",,"false","interacts with","WOX5 (interacts with) WOX5",
+"985",,"interacts with","WOX5 (interacts with) IAA5","1","false","interacts with","WOX5 (interacts with) IAA5",
+"986",,"interacts with","WOX5 (interacts with) PHB","1","false","interacts with","WOX5 (interacts with) PHB",
+"987",,"interacts with","SCR (interacts with) SCR",,"false","interacts with","SCR (interacts with) SCR",
+"988",,"interacts with","SCR (interacts with) miRNA165",,"false","interacts with","SCR (interacts with) miRNA165",
+"989",,"interacts with","SCR (interacts with) JKD",,"false","interacts with","SCR (interacts with) JKD",
