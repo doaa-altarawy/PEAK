@@ -1,4 +1,4 @@
-netAnalysis/BonneauLab/* linguist-vendored
+netAnalysis/lib/BonneauLab/* linguist-vendored
 static/* linguist-vendored
 *.ipynb linguist-vendored
 
