@@ -1,7 +1,8 @@
 # PEAK
 
 PEAK: Integrating Curated and Noisy Prior Knowledge in Gene Regulatory Network Inference.
-### Software under development: http://doaa.cs.vt.edu/
+### Web Application to upload your data, predict with NoiseInf, visualize the results:
+http://doaa.cs.vt.edu/
 
 
 PEAK is a framework for predicting gene regulatory network from gene expression data
@@ -11,10 +12,10 @@ with different types of prior knowledge.
   1. Noisy: use penaltyScaling option
   2. Reliable: use FeatureScaling option
 
-####(Under development): <br>
+#### Web Server: <br>
 A Web server to submit gene expression data and prior knowledge 
 and to visualize the results will be available soon.
-
+http://doaa.cs.vt.edu/
 
 ## Installation
 
